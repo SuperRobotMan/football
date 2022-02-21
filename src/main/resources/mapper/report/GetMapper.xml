@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.jiang.football.mapper.report.GetMapper">
+
+
+    <select id="getHistoryFootballDataFromDB" parameterType="string" resultType="com.jiang.football.models.mapperModels.Football">
+		select
+		report_date as reportDate,
+		week_day as weekDate,
+		competition,
+		home_team as homeTeam,
+		home_score as homeScore,
+		guest_score as guestScore,
+		guest_team as guestTeam,
+		no_concede_points as noConcedePoints,
+		s_odds as sOdds,
+        p_odds as pOdds,
+        f_odds as fOdds,
+        concede_points as concedePoints,
+        rs_odds as rsOdds,
+        rp_odds as rpOdds,
+        rf_odds as rfOdds,
+        ou_init_s_william_odds as ouInitSWilliamOdds,
+        ou_init_p_william_odds as ouInitPWilliamOdds,
+        ou_init_f_william_odds as ouInitFWilliamOdds,
+        ou_js_s_william_odds as ouJSSWilliamOdds,
+        ou_js_p_william_odds as ouJSPWilliamOdds,
+        ou_js_f_william_odds as ouJSFWilliamOdds,
+        ou_init_s_libo_odds as ouInitSLiboOdds,
+        ou_init_p_libo_odds as ouInitPLiboOdds,
+        ou_init_f_libo_odds as ouInitFLiboOdds,
+        ou_js_s_libo_odds as ouJSSLiboOdds,
+        ou_js_p_libo_odds as ouJSPLiboOdds,
+        ou_js_f_libo_odds as ouJSFLiboOdds,
+        ou_init_s_bet365_odds as ouInitSBet365Odds,
+        ou_init_p_bet365_odds as ouInitPBet365Odds,
+        ou_init_f_bet365_odds as ouInitFBet365Odds,
+        ou_js_s_bet365_odds as ouJSSBet365Odds,
+        ou_js_p_bet365_odds as ouJSPBet365Odds,
+        ou_js_f_bet365_odds as ouJSFBet365Odds,
+        ya_init_s_aomen_odds as yaInitSAomenOdds,
+        ya_init_aomen_tape as yaInitAomenTape,
+        ya_init_f_aomen_odds as yaInitFAomenOdds,
+        ya_js_s_aomen_odds as yaJSSAomenOdds,
+        ya_js_aomen_tape as yaJSAomenTape,
+        ya_js_f_aomen_odds as yaJSFAomen_odds,
+        ya_init_s_crown_odds as yaInitSCrownOdds,
+        ya_init_crown_tape as yaInitCrownTape,
+        ya_init_f_crown_odds as yaInitFCrownOdds,
+        ya_js_s_crown_odds as yaJSSCrownOdds,
+        ya_js_crown_tape as yaJSCrownTape,
+        ya_js_f_crown_odds as yaJSFCrownOdds,
+        ya_init_s_bet365_odds as yaInitSBet365Odds,
+        ya_init_bet365_tape as yaInitBet365Tape,
+        ya_init_f_bet365_odds as yaInitFBet365Odds,
+        ya_js_s_bet365_odds as yaJSSBet365Odds,
+        ya_js_bet365_tape as yaJSBet365Tape,
+        ya_js_f_bet365_odd as yaJSFBet365Odd,
+        ya_init_s_ysb_odds as yaInitSYsbOdds,
+        ya_init_ysb_tape as yaInitYsbTape,
+        ya_init_f_ysb_odds as yaInitFYsbOdds,
+        ya_js_s_ysb_odds as yaJSSYsbOdds,
+        ya_js_ysb_tape as yaJSYsbTape,
+        ya_js_f_ysb_odds as yaJSFYsbOdds,
+        ya_init_s_inter_odds as yaInitSInterOdds,
+        ya_init_inter_tape as yaInitInterTape,
+        ya_init_f_inter_odds as yaInitFInterOdds,
+        ya_js_s_inter_odds as yaJSSInterOdds,
+        ya_js_inter_tape as yaJSInterTape,
+        ya_js_f_inter_odds as yaJSFInterOdds
+	    from football.football
+	    where report_date &lt; #{dateStr}
+	</select>
+
+
+</mapper>
