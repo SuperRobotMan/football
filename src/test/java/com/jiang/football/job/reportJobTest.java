@@ -18,7 +18,7 @@ public class reportJobTest {
 
     @Test
     public void startGetFootballDataJob() {
-        reportJob.startGetFootballDataJob("2022-02-10", "2022-02-15");
+        reportJob.startGetFootballDataJob("2022-02-25", "2022-02-26");
     }
 
 

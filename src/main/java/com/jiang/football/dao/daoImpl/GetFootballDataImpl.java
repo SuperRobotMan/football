@@ -222,7 +222,7 @@ public class GetFootballDataImpl implements GetFootballData {
             //提升作用域范围
             Document parse1 = null;
             try {
-                Thread.currentThread().sleep(10000);
+                Thread.currentThread().sleep(15000);
                 parse1 = Jsoup.parse(new URL(ouUrl + "/bjop"), 10000);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -281,7 +281,7 @@ public class GetFootballDataImpl implements GetFootballData {
             //提升作用域范围
             Document parse2 = null;
             try {
-                Thread.currentThread().sleep(10000);
+                Thread.currentThread().sleep(15000);
                 parse2 = Jsoup.parse(new URL(yaUrl + "/ypdb"), 10000);
             } catch (Exception e) {
                 e.printStackTrace();
